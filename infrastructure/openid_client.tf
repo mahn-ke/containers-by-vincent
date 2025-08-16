@@ -13,4 +13,5 @@ resource "keycloak_openid_client" "openid_client" {
     "https://${local.subdomain_label}.by.vincent.mahn.ke/*"
   ]
   use_refresh_tokens = false
+  standard_flow_enabled = true
 }
