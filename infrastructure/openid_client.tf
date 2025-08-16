@@ -12,6 +12,6 @@ resource "keycloak_openid_client" "openid_client" {
   valid_redirect_uris = [
     "https://${local.subdomain_label}.by.vincent.mahn.ke/*"
   ]
-  use_refresh_tokens = false
+  use_refresh_tokens    = false
   standard_flow_enabled = true
 }
