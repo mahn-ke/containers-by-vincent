@@ -1,12 +1,9 @@
-variable "CLIENT_ID" {
-  description = "Keycloak OpenID Client ID for the service"
-  type        = string
-  sensitive   = true
+resource "random_uuid" "uuid" {
 }
 
 resource "keycloak_openid_client" "openid_client" {
   realm_id  = data.keycloak_realm.sso_by_vincent_mahn_ke.id
-  client_id = var.CLIENT_ID
+  client_id = "${local.subdomain_label}-${random_uuid.uuid.result}"
 
   name    = local.subdomain_label
   enabled = true
