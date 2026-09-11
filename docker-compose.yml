@@ -3,7 +3,7 @@ version: "3.7"
 
 services:
     portainer:
-        image: portainer/portainer-ce:lts
+        image: portainer/portainer-ce:lts@sha256:f6bc23d1695530a609563fd65c180aaafec0fc02e019d5fc63d16b6fbe83addd
         container_name: portainer
         restart: always
         ports:
